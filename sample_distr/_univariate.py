@@ -6,7 +6,7 @@ from typing import Callable
 
 
 @dataclass()
-class UniVarSampledDistr[T: float | int]:
+class UniVarSampleDistr[T: float | int]:
     support_weights: dict[T, float] = field(default_factory=lambda: defaultdict(float))
     total_weight: float = 0.0
 
@@ -14,7 +14,7 @@ class UniVarSampledDistr[T: float | int]:
         self.support_weights[observation] += weight
         self.total_weight += weight
 
-    def update_from_other(self, other: UniVarSampledDistr):
+    def update_from_other(self, other: UniVarSampleDistr):
         for supp, supp_w in other.support_weights.items():
             self.observe(supp, supp_w)
 
