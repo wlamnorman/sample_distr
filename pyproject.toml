@@ -1,0 +1,18 @@
+[project]
+name = "sampled_distr"
+version = "0.1.0"
+description = "A package for handling sampled distributions"
+authors = [{ name = "William Norman", email = "vvilliamnorman@gmail.com" }]
+readme = "README.md"
+license = { text = "MIT" }
+keywords = ["distribution", "sample", "probability"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.12"
+
+dynamic = ["dependencies"]
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
